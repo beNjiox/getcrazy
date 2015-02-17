@@ -11,16 +11,23 @@ function Game()
 		"Calcul 1 + 1",
 		"Pluriel de cheval",
 		"Quelle est l'année de la revolution française",
+		"Final de la coupe de france, combien de but de zidane?",
+		"Charlie et ?",
+		"6*7 ?"
 	];
 
 	this.answers = [
 		"2",
 		"chevaux",
-		"1789"
+		"1789",
+		"2",
+		"Lulu",
+		"42"
 	];
 
 	this.handle_submit = function()
 	{
+		console.log("Game status = " + self.game_status)
 		if (self.game_status == self.STARTED)
 		{
 			self.check_answer()			
@@ -36,7 +43,9 @@ function Game()
 			self.game_status = self.STARTED
 		}
 		else
-		{
+		{			
+			self.check_answer()
+			self.update_score()		
 			return self.game_over()
 		}
 
@@ -52,13 +61,17 @@ function Game()
 
 	this.is_last_question = function()
 	{
-		return self.question_number == self.questions.length + 1
+		number_of_questions = parseInt(self.questions.length)
+		console.log ("Is last question? " + self.question_number + " " + number_of_questions)
+		return self.question_number === number_of_questions
 	}
 
 	this.check_answer = function()
-	{
+	{		
+		console.log("Check Answer")
 		answer_expected = self.answers[self.question_number - 2]
 		answer = $('#main-row').find('input').val()
+		console.log(answer_expected + " == " + answer + " ? (Question N" + self.question_number + ")")
 		if (answer == answer_expected)
 		{
 			self.score += 10
