@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+	<script type="text/javascript" src='assets/js/jquery-1.10.2.min.js'></script>
+	<script type="text/javascript" src='assets/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src='assets/js/main.js'></script>
+</head>
+<body>   
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Get Crazy</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container text-center" id='game'>
+		<div class='row'>
+			<div class='col-md-8 text-left'>
+				<h1>Question</h1>
+			</div>
+			<div class="col-md-4 text-right score">
+			</div>
+		</div>
+		
+
+		<div class="row" id='main-row'>
+			<div class="col-md-12">
+				<input class="form-control input-lg" type="text" placeholder="Enter your answer here">				
+			</div>
+			<div class="col-md-12">
+				<button type="button" class="btn btn-primary btn-block btn-lg" id='submit_answer'>Start !</button>
+			</div>
+		</div>
+	</div>
+
+	<div class='container' id='game_over'>
+		<h1>Game over!</h1>
+
+		<h2>Congratulations, you ended up this game with a score of <span class='score'></span></h2>
+
+		<button type="button" class="btn btn-reverse btn-block btn-lg" id='reset'>Try again</button>
+	</div>
+
+</body>
+</html>

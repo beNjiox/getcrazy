@@ -1,0 +1,36 @@
+body
+{
+	font-family: Tahoma;
+	padding-top:60px;
+}
+
+#main-row 
+{
+	div
+	{
+		padding-top:30px;
+	}
+
+	input
+	{
+		display:none;
+	}
+}
+
+#game
+{
+	.score
+	{
+		font-size:100px;
+	}
+}
+
+#game_over
+{
+	display:none;
+
+	.score
+	{
+		color: green;
+	}
+}
